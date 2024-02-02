@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Random Pick-up Lines </title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        .heart {
+            margin: 0px;
+            padding: 0px;
+            width: 200px;
+            height: 150px;
+            align-items: center;
+            background-image: url('draw.png'); /* Replace 'heart.png' with your heart image */
+            background-size: cover;
+            cursor: pointer;
+            animation: heartbeat 1s infinite;
+        }
+
+        @keyframes heartbeat {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        #pickupLine {
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Click the heart for a pick-up line</h1>
+        <div class="heart" onclick="generatePickupLine()"></div>
+        <p id="pickupLine"></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+<script>
+    const pickupLines = [
+    "Are you a magician? Because whenever I look at you, everyone else disappears.",
+    "Do you have a map? I keep getting lost in your eyes.",
+    "Are you a parking ticket? Because you've got FINE written all over you.",
+    "Are you a WiFi signal? Because I'm feeling a connection.",
+    "If beauty were time, you'd be an eternity.",
+    "Do you have a Band-Aid? Because I just scraped my knee falling for you.",
+    "Is your name Google? Because you have everything I've been searching for.",
+    "Do you have a sunburn, or are you always this hot?",
+    "Are you made of copper and tellurium? Because you're Cu-Te.",
+    "Excuse me, but I think the stars tonight are outshone by your smile.",
+    "If you were a vegetable, you'd be a cute-cumber!",
+    "Do you believe in love at first sight, or should I walk by again?",
+    "Is your name Wi-fi? Because I'm feeling a connection.",
+    "Are you a camera? Every time I look at you, I smile.",
+    "Do you have a pencil? Cause I want to erase your past and write our future.",
+    "Are you a bank loan? Because you have my interest!",
+    "Do you have a name, or can I call you mine?",
+    "Excuse me, but I think you dropped something: MY JAW!",
+    "Are you a time traveler? Because I can't imagine my future without you.",
+    "Do you have a map? I keep getting lost in your eyes.",
+    "If you were words on a page, you'd be fine print.",
+    "Barya ka ba? Kasi simula ng umaga, kailangan na kitang makasama.",
+  "Handa akong lakbayin ang mundo, hangga’t ang hangganan ay iyong puso.",
+  "Mag-impake ka na at samahan natin ang tahanan ng mga nakatatanda, dahil gusto kitang kasama habang tumatanda.",
+  "Sa buhay kong tila nasa see-saw, bumabagsak ang saya kapag wala ka.",
+  "Uy, magpa-picture tayo! Upang mabuo ang ating pagkakaibigan.",
+  "Pwede bang tingnan mo ako kapag ako’y tumitingin sa’yo? Upang may pag-asa tayong magkasaling tingin.",
+  "Nakakatakot ba ang multo? Ngunit higit na nakakatakot ang mawala ka sa aking buhay.",
+  "Naka-lunok ka ba ng sparkler? Dahil kapag ngumiti ka, may liwanag na sumisindi.",
+  "Wala akong ibang hilig, ngunit simula nang makilala kita, naging adik na ako sa iyong presensya.",
+  "Patawad po, Miss! Parang puno ka ng kahoy? Dahil nais kitang abutin at pagsilbihan.",
+  "Pwede ba kitang abutin? Sapagkat ikaw ang aking hinahangad.",
+  "Hindi ko alam ang hangganan ng langit, ngunit alam ko ang simula: U N I.",
+  "Kung ikaw ay bola at ako ang manlalaro, hindi kita itatapon. Sapagkat ikaw ang laging hahanap-hanapin ko.",
+  "May kilala ka bang gumagawa ng relo? May sira ata relo ko. Kapayag ikaw kasi kasama ko, humihinto ang oras ko.",
+  "Pwede ba kitang maging sidecar? Single kasi ako eh.",
+  "Sana posporo ka, at ako rin. Para mag-match tayo!",
+  "Exam ka ba? Dahil gustong-gusto kitang i-take home.",
+  "Lecture mo ba ako? Dahil lab kita.",
+  "Ikaw ba ang may-ari ng Crayola? Dahil ikaw ang nagpapaganap ng kabuuan ng aking buhay.",
+  "Miss, pwede ba kitang maging driver? Upang ikaw ang magpapatakbo ng aking buhay.",
+  "Mahilig ka ba sa asukal? Dahil ang tamis ng mga ngiti mo.",
+  "Pinaglihi ka ba sa keyboard? Dahil type kita.",
+  "Bibili ako ng salbabida para sa iyo. Dahil malulunod ka sa pagmamahal ko.",
+  "Dalawa lang ang pwedeng mangyari. Either magmurahan tayo o magmahalan tayo.",
+  "O gusto mong dumaan ulit ako?",
+  "Kung bola ka, at ako ang player. Maso-shoot ba kita? Hindi. Kasi lagi kitang ma-mi-miss!",
+  "Pwede ba kitang abutin? Pangarap kasi kita eh.",
+  "Yelo ka ba? Sarap mo kasi ipukpok sa pader.",
+  "Ikaw ba ang magaling sa puzzle? Kasi kakasimula pa lang ng araw ko, pero nabuo mo na agad.",
+  "Ahhh, excuse me Miss! Troso ka ba? Kasi gusto kitang sibakin!"
+    
+    // Add more pickup lines as needed
+];
+
+function generatePickupLine() {
+    const randomIndex = Math.floor(Math.random() * pickupLines.length);
+    const pickupLineElement = document.getElementById("pickupLine");
+    pickupLineElement.textContent = pickupLines[randomIndex];
+}
+</script>
+</html>
